@@ -13,13 +13,12 @@ namespace ImageTest.UWP
 {
     public class DateToStringConverter : IValueConverter
     {
-
-        public string Format { get; set; }
         public object Convert(object value, Type targetType, object parameter, string language)
         {
+
             var temp = new BitmapImage();
             var assembly = typeof(ImageTest.App).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream("ImageTest.hello.jpg");
+            Stream stream = assembly.GetManifestResourceStream(value as string);
             if (stream != null)
             {
                 using (var memStream = new MemoryStream())

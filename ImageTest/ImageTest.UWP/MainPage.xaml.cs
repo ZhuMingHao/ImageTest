@@ -27,8 +27,8 @@ namespace ImageTest.UWP
         {
             this.InitializeComponent();      
             viewModel = this.DataContext as MainViewModel;
-            viewModel.items.Add(new Model());
-            viewModel.items.Add(new Model());
+            viewModel.items.Add(new Model() { imageSource = "ImageTest.hello.jpg" });
+            viewModel.items.Add(new Model() { imageSource= "ImageTest.hello.jpg" });
             MyGridView.ItemsSource = viewModel.items;
         }
     }
