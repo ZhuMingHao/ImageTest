@@ -15,7 +15,6 @@ namespace ImageTest.UWP
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-
             var temp = new BitmapImage();
             var assembly = typeof(ImageTest.App).GetTypeInfo().Assembly;
             Stream stream = assembly.GetManifestResourceStream(value as string);
